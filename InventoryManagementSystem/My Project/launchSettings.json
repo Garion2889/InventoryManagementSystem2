@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Front": {
+      "commandName": "Project",
+      "workingDirectory": ""
+    }
+  }
+}
