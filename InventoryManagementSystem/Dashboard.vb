@@ -102,7 +102,7 @@ Public Class Dashboard
         LoadSuppliers()
         LoadAdjustments()
         LoadLogFiles()
-        LoadStockAlertData()
+
         stocklevel.Series.Clear()
 
         ' Add a new series for the bar chart
@@ -163,7 +163,7 @@ Public Class Dashboard
         Dim restockSeries As New Series("Restock Status")
         restockSeries.ChartType = SeriesChartType.Pie ' Set the chart type to Pie
         restockSeries.IsValueShownAsLabel = True ' Show values on the chart
-        restockSeries.LabelFormat = "#%" ' Format as percentage
+
 
         ' Add the series to the chart
         restockstatus.Series.Add(restockSeries)
@@ -214,24 +214,361 @@ Public Class Dashboard
         SalesPerformance()
         productsupplier.Series.Clear()
 
-        ' Configure Chart Area
         productsupplier.ChartAreas.Clear()
         Dim chartArea As New ChartArea("MainArea")
         productsupplier.ChartAreas.Add(chartArea)
         prosup()
-
         sek()
-
-        ' Configure Chart Area
-
+        TUS()
+        OFR()
+        connectAlt()
+        connectTotalSpending()
+        connectPaymentTerms()
+        connectOutstandingPayments()
+        loadsupplierrating()
+        loadIssuesReportedBarChart()
+        loadPreferredSupplierStatusBarChart()
     End Sub
-    Private Sub utp()
-        tus.Series.Clear()
+    Private Sub TUS()
+        TUSCHART.Series.Clear()
 
         ' Add a Chart Area if not already present
-        tus.ChartAreas.Clear()
+        TUSCHART.ChartAreas.Clear()
         Dim chartArea As New ChartArea("ChartArea1") ' Ensure the name matches
-        tus.ChartAreas.Add(chartArea)
+        TUSCHART.ChartAreas.Add(chartArea)
+
+        ' Add a series for the column chart
+        Dim series As New Series("Total Units Supplied")
+        series.ChartType = SeriesChartType.Column ' Set the chart type to Column (vertical bars)
+        series.ChartArea = "ChartArea1" ' Assign to the correct ChartArea
+        series.IsValueShownAsLabel = True ' Display values on the chart
+        series.Font = New Font("Arial", 10, FontStyle.Bold) ' Optional: Style for labels
+
+        ' Add the series to the chart
+        TUSCHART.Series.Add(series)
+
+        ' Retrieve data from MySQL and populate the chart
+        tusload(series)
+    End Sub
+    Private Sub tusload(series As Series)
+        ' Define the SQL query to get the total quantity of products supplied (using stock or quantity as measure)
+        Dim query As String = "SELECT suppliername,TotalUnitsSupplied
+                              FROM suppliers_info;"
+        ' Connect to the MySQL database
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(query, connection)
+            connection.Open()
+
+            ' Execute the query and read the data
+            Using reader As MySqlDataReader = command.ExecuteReader()
+                While reader.Read()
+                    ' Get product name and total units supplied
+                    Dim supplierName As String = reader("SupplierName").ToString()
+                    Dim totalUnits As Double = Convert.ToDouble(reader("TotalUnitsSupplied"))
+
+                    ' Add data points to the series
+                    series.Points.AddXY(supplierName, totalUnits)
+                End While
+            End Using
+        End Using
+    End Sub
+    Private Sub SetFulfillmentRateGaugeChart(fulfillmentRate As Double)
+        ' Clear the chart before adding data
+        OFRchart.Series.Clear()
+        OFRchart.Legends.Clear()
+
+        ' Create a series to hold the data points
+        Dim series As New Series("Fulfillment Rate")
+        series.ChartType = SeriesChartType.Doughnut
+        series.Points.Add(fulfillmentRate) ' Fulfilled rate
+        series.Points.Add(100 - fulfillmentRate) ' Remaining part (unfulfilled)
+
+        ' Add the series to the chart
+        OFRchart.Series.Add(series)
+
+        ' Customize the chart appearance (optional)
+        OFRchart.Palette = ChartColorPalette.BrightPastel
+        OFRchart.ChartAreas(0).Area3DStyle.Enable3D = True
+
+        ' Customize the gauge appearance
+        series("PieLabelStyle") = "Outside"
+        series("Exploded") = "true"
+        series.BorderWidth = 0
+
+        ' Add title to chart (optional)
+        OFRchart.Titles.Clear()
+        OFRchart.Titles.Add("Order Fulfillment Rate")
+
+        ' Optionally add data labels to show percentages
+        For Each point As DataPoint In series.Points
+            point.IsValueShownAsLabel = True
+            point.Label = $"{point.YValues(0):0}%"
+        Next
+    End Sub
+    Dim query As String = "SELECT OrderFulfillmentRate FROM suppliers_info;"
+
+    ' Connect to the MySQL database
+    Private Sub connectAlt()
+        Dim query As String = "SELECT SupplierName, AverageLeadTime FROM suppliers_info;"
+
+        ' Connect to the MySQL database
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(query, connection)
+            connection.Open()
+
+            ' Execute the query and read the data
+            Using reader As MySqlDataReader = command.ExecuteReader()
+                ' Clear any existing chart data
+                altChart.Series.Clear()
+
+                ' Create a series for the bar chart
+                Dim series As New Series("Average Lead Time")
+                series.ChartType = SeriesChartType.Bar
+                series.BorderWidth = 3 ' Set bar thickness
+                series.Color = Color.Blue ' Set the color of the bars
+
+                ' Add data points to the series (Supplier and Average Lead Time)
+                While reader.Read()
+                    Dim Supplier As String = reader("SupplierName").ToString()
+                    ' Use a default value (like 0) if AverageLeadTime is null
+                    Dim averageLeadTime As Double = If(IsDBNull(reader("AverageLeadTime")), 0, Convert.ToDouble(reader("AverageLeadTime")))
+
+                    ' Add the data point to the bar chart
+                    series.Points.AddXY(Supplier, averageLeadTime)
+                End While
+
+                ' Add the series to the chart
+                altChart.Series.Add(series)
+
+                ' Customize the chart appearance
+                altChart.Palette = ChartColorPalette.BrightPastel
+                altChart.ChartAreas(0).Area3DStyle.Enable3D = False
+
+                ' Add title to the chart
+                altChart.Titles.Clear()
+                altChart.Titles.Add("Average Lead Time per Supplier")
+
+                ' Customize the X and Y Axis
+                altChart.ChartAreas(0).AxisX.Title = "Supplier"
+                altChart.ChartAreas(0).AxisY.Title = "Average Lead Time (Days)"
+
+                ' Optionally, format the Y-axis as numbers with 2 decimal places
+                altChart.ChartAreas(0).AxisY.LabelStyle.Format = "0.00"
+
+                ' Optionally adjust the X-axis for better readability (rotate labels, if needed)
+                altChart.ChartAreas(0).AxisX.LabelStyle.Angle = 0
+                altChart.ChartAreas(0).AxisX.Interval = 1 ' Ensure each label is displayed
+            End Using
+        End Using
+    End Sub
+    Private Sub connectPaymentTerms()
+        Dim query As String = "SELECT SupplierName, PaymentTerms, COUNT(*) AS TermCount FROM suppliers_info GROUP BY SupplierName, PaymentTerms;"
+
+        ' Connect to the MySQL database
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(query, connection)
+            connection.Open()
+
+            ' Execute the query and read the data
+            Using reader As MySqlDataReader = command.ExecuteReader()
+                ' Clear any existing chart data
+                paymentTermsChart.Series.Clear()
+                paymentTermsChart.ChartAreas.Clear()
+
+                ' Create a chart area for grouped bars
+                Dim chartArea As New ChartArea("ChartArea1")
+                paymentTermsChart.ChartAreas.Add(chartArea)
+
+                ' Dictionary to track unique payment terms
+                Dim uniqueTerms As New HashSet(Of String)
+
+                ' Read data and collect unique payment terms
+                Dim data As New List(Of Tuple(Of String, String, Integer)) ' (SupplierName, PaymentTerm, TermCount)
+                While reader.Read()
+                    Dim supplier As String = reader("SupplierName").ToString()
+                    Dim paymentTerm As String = reader("PaymentTerms").ToString()
+                    Dim termCount As Integer = Convert.ToInt32(reader("TermCount"))
+
+                    ' Track the payment terms
+                    uniqueTerms.Add(paymentTerm)
+
+                    ' Add the data to the list
+                    data.Add(Tuple.Create(supplier, paymentTerm, termCount))
+                End While
+
+                ' Create a series for each payment term
+                For Each term As String In uniqueTerms
+                    Dim series As New Series(term)
+                    series.ChartType = SeriesChartType.Bar
+                    series.IsValueShownAsLabel = True ' Show labels on bars
+
+                    ' Add data points to the series
+                    For Each entry In data
+                        If entry.Item2 = term Then ' Match the payment term
+                            series.Points.AddXY(entry.Item1, entry.Item3) ' SupplierName and TermCount
+                        End If
+                    Next
+
+                    ' Add the series to the chart
+                    paymentTermsChart.Series.Add(series)
+                Next
+
+                ' Customize the chart appearance
+                paymentTermsChart.Titles.Clear()
+                paymentTermsChart.Titles.Add("Payment Terms by Supplier")
+                paymentTermsChart.Palette = ChartColorPalette.BrightPastel
+
+                ' Customize the X and Y axes
+                chartArea.AxisX.Title = "Supplier Name"
+                chartArea.AxisY.Title = "Frequency of Payment Terms"
+                chartArea.AxisY.LabelStyle.Format = "0" ' Integer values only
+
+                ' Optional: Adjust bar spacing
+                chartArea.InnerPlotPosition = New ElementPosition(5, 5, 90, 85)
+                chartArea.AxisX.Interval = 1 ' Ensure all supplier names are visible
+                chartArea.AxisX.LabelStyle.Font = New Font("Arial", 8)
+
+            End Using
+        End Using
+    End Sub
+    Private Sub connectOutstandingPayments()
+        Dim query As String = "SELECT SupplierName, OutstandingPayments FROM suppliers_info;"
+
+        ' Connect to the MySQL database
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(query, connection)
+            connection.Open()
+
+            ' Execute the query and read the data
+            Using reader As MySqlDataReader = command.ExecuteReader()
+                ' Clear any existing chart data
+                outstandingPaymentsChart.Series.Clear()
+                outstandingPaymentsChart.ChartAreas.Clear()
+
+                ' Create a new chart area
+                Dim chartArea As New ChartArea("ChartArea1")
+                outstandingPaymentsChart.ChartAreas.Add(chartArea)
+
+                ' Create a series for the bar chart
+                Dim series As New Series("Outstanding Payments")
+                series.ChartType = SeriesChartType.Bar
+                series.IsValueShownAsLabel = True ' Show labels on top of bars
+                series.Color = Color.Orange ' Customize bar color
+
+                ' Add data points to the series
+                While reader.Read()
+                    Dim supplierName As String = reader("SupplierName").ToString()
+                    Dim outstandingPayments As Double = Convert.ToDouble(reader("OutstandingPayments"))
+
+                    ' Truncate supplier name if too long
+                    Dim shortSupplierName As String = If(supplierName.Length > 10, supplierName.Substring(0, 10) & "...", supplierName)
+
+                    ' Add data point
+                    series.Points.AddXY(shortSupplierName, outstandingPayments)
+                End While
+
+                ' Add the series to the chart
+                outstandingPaymentsChart.Series.Add(series)
+
+                ' Customize the chart appearance
+                outstandingPaymentsChart.Titles.Clear()
+                outstandingPaymentsChart.Titles.Add("Outstanding Payments by Supplier")
+                outstandingPaymentsChart.Palette = ChartColorPalette.BrightPastel
+
+                ' Customize the X and Y axes
+                chartArea.AxisX.Title = "Supplier Name"
+                chartArea.AxisY.Title = "Outstanding Payments (in $)"
+                chartArea.AxisY.LabelStyle.Format = "C" ' Format Y-axis as currency
+
+                ' Rotate X-axis labels for readability
+                chartArea.AxisX.LabelStyle.Angle = -45
+                chartArea.AxisX.LabelStyle.Font = New Font("Arial", 8)
+
+
+                ' Adjust spacing in the chart
+                chartArea.InnerPlotPosition = New ElementPosition(5, 5, 90, 85)
+                chartArea.AxisX.Interval = 1 ' Ensure all supplier names are visible
+            End Using
+        End Using
+    End Sub
+
+    Private Sub connectTotalSpending()
+        Dim query As String = "SELECT SupplierName, TotalSpending FROM suppliers_info;"
+
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(query, connection)
+            connection.Open()
+
+            ' Execute the query and read the data
+            Using reader As MySqlDataReader = command.ExecuteReader()
+                ' Clear any existing chart data
+                spendingChart.Series.Clear()
+
+                ' Create a series for the bar chart
+                Dim series As New Series("Total Spending")
+                series.ChartType = SeriesChartType.Bar
+                series.BorderWidth = 3 ' Set bar thickness
+                series.Color = Color.Blue ' Set the color of the bars
+
+                ' Add data points to the series (Supplier and Average Lead Time)
+                While reader.Read()
+                    Dim Supplier As String = reader("SupplierName").ToString()
+
+                    Dim TotalSpending As Double = If(IsDBNull(reader("TotalSpending")), 0, Convert.ToDouble(reader("TotalSpending")))
+
+                    ' Add the data point to the bar chart
+                    series.Points.AddXY(Supplier, TotalSpending)
+                End While
+
+                ' Add the series to the chart
+                spendingChart.Series.Add(series)
+
+                ' Customize the chart appearance
+                spendingChart.Palette = ChartColorPalette.BrightPastel
+                spendingChart.ChartAreas(0).Area3DStyle.Enable3D = False
+
+                ' Add title to the chart
+                spendingChart.Titles.Clear()
+                spendingChart.Titles.Add("Average Lead Time per Supplier")
+
+                ' Customize the X and Y Axis
+                spendingChart.ChartAreas(0).AxisX.Title = "Supplier"
+                spendingChart.ChartAreas(0).AxisY.Title = "Total Spending"
+
+                ' Optionally, format the Y-axis as numbers with 2 decimal places
+                spendingChart.ChartAreas(0).AxisY.LabelStyle.Format = "0.00"
+
+                ' Optionally adjust the X-axis for better readability (rotate labels, if needed)
+                spendingChart.ChartAreas(0).AxisX.LabelStyle.Angle = 0
+                spendingChart.ChartAreas(0).AxisX.Interval = 1 ' Ensure each label is displayed
+            End Using
+        End Using
+    End Sub
+
+    Private Sub OFR()
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(query, connection)
+            connection.Open()
+
+            ' Execute the query and read the data
+            Using reader As MySqlDataReader = command.ExecuteReader()
+                If reader.Read() Then
+                    ' Get the order fulfillment rate value from the database
+                    Dim fulfillmentRate As Double = Convert.ToDouble(reader("OrderFulfillmentRate"))
+
+                    ' Set the fulfillment rate value in the chart
+                    SetFulfillmentRateGaugeChart(fulfillmentRate)
+                End If
+            End Using
+        End Using
+    End Sub
+    Private Sub utp()
+        TUSCHART.Series.Clear()
+
+        ' Add a Chart Area if not already present
+        TUSCHART.ChartAreas.Clear()
+        Dim chartArea As New ChartArea("ChartArea1") ' Ensure the name matches
+        TUSCHART.ChartAreas.Add(chartArea)
 
         ' Add a series for the bar chart
         Dim series As New Series("Total Units Supplied")
@@ -241,11 +578,187 @@ Public Class Dashboard
         series.Font = New Font("Arial", 10, FontStyle.Bold) ' Optional: Style for labels
 
         ' Add the series to the chart
-        tus.Series.Add(series)
+        TUSCHART.Series.Add(series)
 
         ' Retrieve data from MySQL and populate the chart
         umf(series)
     End Sub
+
+    Private Sub loadsupplierrating()
+        ' Define the SQL query to fetch supplier ratings
+        Dim query As String = "SELECT SupplierName, SupplierRating FROM suppliers_info;"
+        ' Clear the existing series in the chart to avoid duplication
+        suprate.Series.Clear()
+
+        ' Open SQL connection
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(query, connection)
+            connection.Open()
+
+            ' Execute the query and read the data
+            Using reader As MySqlDataReader = command.ExecuteReader()
+                ' Create series for Supplier Ratings
+                Dim Series1 As New Series("SupplierRating")
+                ' Set chart type to Bar
+                Series1.ChartType = SeriesChartType.Bar
+
+                ' Loop through the database records and add data to each series
+                While reader.Read()
+                    ' Read supplier name and ratings
+                    Dim supplierName As String = reader("SupplierName").ToString()
+                    Dim supplyrate As Integer = Convert.ToInt32(reader("SupplierRating"))
+
+                    ' Add data points for each rating category
+                    Series1.Points.AddXY(supplierName, supplyrate)
+                End While
+                suprate.Series.Add(Series1)
+
+                ' Customize the chart appearance
+                suprate.Titles.Clear()
+                suprate.Titles.Add("Supplier Ratings")
+
+                ' Customize the X and Y axis titles
+                suprate.ChartAreas(0).AxisX.Title = "Supplier"
+                suprate.ChartAreas(0).AxisY.Title = "Rating (1-5)"
+
+                ' Customize Y-axis to show ratings (1-5 scale)
+                suprate.ChartAreas(0).AxisY.Minimum = 0
+                suprate.ChartAreas(0).AxisY.Maximum = 5
+                suprate.ChartAreas(0).AxisY.Interval = 1
+
+                ' Adjust X-axis to show all supplier names properly
+
+                suprate.ChartAreas(0).AxisX.Interval = 1 ' Ensure all labels are visible
+                suprate.ChartAreas(0).AxisX.LabelStyle.IsEndLabelVisible = True
+                suprate.ChartAreas(0).AxisX.LabelStyle.Font = New Font("Arial", 8) ' Adjust font size
+
+                ' Optionally, you can increase chart width for better visibility
+                suprate.Width = 600 ' Increase the width of the chart
+            End Using
+        End Using
+    End Sub
+
+    Private Sub loadPreferredSupplierStatusBarChart()
+        ' Define the SQL query to fetch supplier names and preferred supplier status
+        Dim query As String = "SELECT SupplierName, PreferredSupplierStatus FROM suppliers_info;"
+
+        ' Clear the existing series in the chart to avoid duplication
+        PSSchart.Series.Clear()
+
+        ' Open SQL connection
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(query, connection)
+            connection.Open()
+
+            ' Execute the query and read the data
+            Using reader As MySqlDataReader = command.ExecuteReader()
+                ' Create series for the bar chart
+                Dim series As New Series("Preferred Supplier Status")
+                series.ChartType = SeriesChartType.Bar
+                series.BorderWidth = 3
+
+                ' Loop through the database records and add data for each supplier
+                While reader.Read()
+                    ' Read supplier name and preferred status (1 for preferred, 0 for non-preferred)
+                    Dim supplierName As String = reader("SupplierName").ToString()
+                    Dim preferredStatus As Integer = Convert.ToInt32(reader("PreferredSupplierStatus"))
+
+                    ' Add data point for each supplier (show 1 for Preferred, 0 for Non-Preferred)
+                    If preferredStatus = 1 Then
+                        series.Points.AddXY(supplierName, 1) ' Preferred
+                    ElseIf preferredStatus = 0 Then
+                        series.Points.AddXY(supplierName, 0) ' Non-Preferred
+                    End If
+                End While
+
+                ' Add the series to the chart
+                PSSchart.Series.Add(series)
+
+                ' Customize the chart appearance
+                PSSchart.Titles.Clear()
+                PSSchart.Titles.Add("Supplier Preferred Status")
+
+                ' Customize the X and Y axis titles
+                PSSchart.ChartAreas(0).AxisX.Title = "Supplier"
+                PSSchart.ChartAreas(0).AxisY.Title = "Preferred Status"
+
+                ' Customize Y-axis to show '1' for Preferred, '0' for Non-Preferred
+                PSSchart.ChartAreas(0).AxisY.Minimum = 0
+                PSSchart.ChartAreas(0).AxisY.Maximum = 1
+                PSSchart.ChartAreas(0).AxisY.Interval = 1
+                ' Increase chart width for better label spacing (if needed)
+                PSSchart.Width = 600 ' Adjust this value based on your requirements
+
+                ' Adjust X-axis label interval to show every label
+                PSSchart.ChartAreas(0).AxisX.Interval = 1 ' Ensures all labels are visible
+                PSSchart.ChartAreas(0).AxisX.LabelStyle.IsEndLabelVisible = True
+                PSSchart.ChartAreas(0).AxisX.LabelStyle.Font = New Font("Arial", 8) ' Adjust font size
+
+                ' Optional: Customize colors for clarity
+                series.Color = Color.Blue
+            End Using
+        End Using
+    End Sub
+
+    Private Sub loadIssuesReportedBarChart()
+        ' Define the SQL query to fetch supplier names() and the number of issues reported
+        Dim query As String = "SELECT SupplierName, IssuesReported FROM suppliers_info;"
+
+        ' Clear the existing series in the chart to avoid duplication
+        IssuesChart.Series.Clear()
+
+        ' Open SQL connection
+        Using connection As New MySqlConnection(connectionString)
+            Dim command As New MySqlCommand(query, connection)
+            connection.Open()
+
+            ' Execute the query and read the data
+            Using reader As MySqlDataReader = command.ExecuteReader()
+                ' Create series for the bar chart
+                Dim series As New Series("Issues Reported")
+                series.ChartType = SeriesChartType.Bar
+                series.BorderWidth = 3
+
+                ' Loop through the database records and add data for each supplier
+                While reader.Read()
+                    ' Read supplier name and number of issues reported
+                    Dim supplierName As String = reader("SupplierName").ToString()
+                    Dim issuesCount As Integer = Convert.ToInt32(reader("IssuesReported"))
+
+                    ' Add data point for each supplier (number of issues encountered)
+                    series.Points.AddXY(supplierName, issuesCount)
+                End While
+
+                ' Add the series to the chart
+                IssuesChart.Series.Add(series)
+
+                ' Customize the chart appearance
+                IssuesChart.Titles.Clear()
+                IssuesChart.Titles.Add("Issues Reported by Suppliers")
+
+                ' Customize the X and Y axis titles
+                IssuesChart.ChartAreas(0).AxisX.Title = "Supplier"
+                IssuesChart.ChartAreas(0).AxisY.Title = "Number of Issues"
+
+                ' Set Y-axis to start at 0, with an interval of 1 (or adjust as needed)
+                IssuesChart.ChartAreas(0).AxisY.Minimum = 0
+                IssuesChart.ChartAreas(0).AxisY.Interval = 1
+
+                ' Increase chart width for better label spacing (if needed)
+                IssuesChart.Width = 600 ' Adjust this value based on your requirements
+
+                ' Adjust X-axis label interval to show every label
+                IssuesChart.ChartAreas(0).AxisX.Interval = 1 ' Ensures all labels are visible
+                IssuesChart.ChartAreas(0).AxisX.LabelStyle.IsEndLabelVisible = True
+                IssuesChart.ChartAreas(0).AxisX.LabelStyle.Font = New Font("Arial", 8) ' Adjust font size
+
+                ' Optional: Customize colors for clarity
+                series.Color = Color.Red ' Example color for issues
+            End Using
+        End Using
+    End Sub
+
+
     Private Sub umf(series As Series)
         Dim query As String = "SELECT ProductName, SUM(Stock) AS TotalUnitsSupplied " &
                               "FROM products " &
@@ -271,6 +784,7 @@ Public Class Dashboard
         End Using
 
     End Sub
+
     Private Sub sek()
         totalordersplaced.Series.Clear()
 
@@ -486,20 +1000,14 @@ Public Class Dashboard
     End Sub
 
     Private Sub stockreceived()
-        ' Define the SQL query
         Dim query As String = "
-            SELECT 
-                p.Product AS product_name, 
-                s.Supplier AS supplier, 
-                so.StockReceived AS stockreceived
-            FROM 
-                stock_overview so
-            JOIN 
-                products p ON so.ProductID = p.ProductID
-            JOIN 
-                suppliers s ON p.Supplier = s.Supplier
-            WHERE 
-                so.StockReceived > 0;"
+   SELECT p.Product, s.Supplier, SUM(so.StockReceived) AS TotalStockReceived
+FROM stock_overview so
+JOIN products p ON so.ProductID = p.ProductID
+JOIN suppliers s ON p.Supplier = s.Supplier
+WHERE so.StockReceived > 0
+GROUP BY p.Product, s.Supplier
+ORDER BY s.Supplier, p.Product;"
 
         ' Connect to the MySQL database
         Using connection As New MySqlConnection(connectionString)
@@ -509,9 +1017,9 @@ Public Class Dashboard
             ' Execute the query and read the data
             Using reader As MySqlDataReader = command.ExecuteReader()
                 While reader.Read()
-                    Dim productName As String = reader("productname").ToString()
-                    Dim supplierName As String = reader("supplier").ToString()
-                    Dim stockReceived As Double = Convert.ToDouble(reader("stockreceived"))
+                    Dim productName As String = reader("Product").ToString()
+                    Dim supplierName As String = reader("Supplier").ToString()
+                    Dim stockReceived As Double = Convert.ToDouble(reader("TotalStockReceived"))
 
                     ' Check if a series already exists for the supplier
                     Dim series As Series = strecevied.Series.FindByName(supplierName)
@@ -999,65 +1507,4 @@ Public Class Dashboard
     Private Sub btnLoadLogs_Click(sender As Object, e As EventArgs) Handles btnLoadLogs.Click
         LoadLogFiles()
     End Sub
-    Private Sub LoadStockAlertData()
-        Try
-            Dim threshold As Integer = 5 ' Define low stock threshold
-            Dim query As String = "SELECT Product, Quantity FROM products WHERE Quantity <= @Threshold ORDER BY Quantity ASC"
-            Dim adapter As New MySqlDataAdapter(query, connection)
-            adapter.SelectCommand.Parameters.AddWithValue("@Threshold", threshold)
-
-            Dim table As New DataTable()
-            adapter.Fill(table)
-
-            UpdateStockAlertChart(table) ' Pass data to the chart update function
-        Catch ex As Exception
-            MessageBox.Show($"Error loading stock alert data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub UpdateStockAlertChart(data As DataTable)
-        ' Clear existing series
-        stocklevel.Series.Clear()
-
-        ' Create a new series
-        Dim series As New Series("Stock Alert") With {
-        .ChartType = SeriesChartType.Column
-    }
-
-        ' Loop through the data and add points to the series
-        For Each row As DataRow In data.Rows
-            Dim productName As String = row("Product").ToString()
-            Dim quantity As Integer = Convert.ToInt32(row("Quantity"))
-
-            ' Add a data point
-            Dim point As New DataPoint()
-            point.AxisLabel = productName
-            point.YValues = New Double() {quantity}
-
-            ' Apply color coding
-            If quantity = 0 Then
-                point.Color = Color.Red ' Out of stock
-            ElseIf quantity <= 5 Then
-                point.Color = Color.Yellow ' Low stock
-            Else
-                point.Color = Color.Green ' Adequate stock
-            End If
-
-            series.Points.Add(point)
-        Next
-
-        ' Add the series to the chart
-        stocklevel.Series.Add(series)
-
-        ' Configure chart area
-        With stocklevel.ChartAreas(0)
-            .AxisX.Title = "Products"
-            .AxisY.Title = "Quantity"
-            .RecalculateAxesScale()
-        End With
-
-        ' Refresh chart
-        stocklevel.Invalidate()
-    End Sub
-
 End Class

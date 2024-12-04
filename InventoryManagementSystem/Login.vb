@@ -19,14 +19,13 @@ Public Class Login
         Dim adminpass As String = txtPassword.Text
 
         If ValidateUserLogin(username, password) Then
-            MessageBox.Show("User Login Successful!")
             AuditTrail.WriteLog(username & " has logged in")
             loginAttempts = 0
             Dim dashboard As New Dashboard("", username)
             dashboard.Show()
             Me.Hide()
         ElseIf AdminLogin(admin, adminpass) Then
-            MessageBox.Show("Admin Login Successful!")
+            ' MessageBox.Show("Welcome Administrator Successful!")
             AuditTrail.WriteLog(admin & " has logged in as an admin.")
             loginAttempts = 0
             Dim dashboard As New Dashboard("", admin)

@@ -60,6 +60,27 @@ Partial Class Dashboard
         Dim ChartArea12 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend12 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series13 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea13 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend13 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series14 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea14 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend14 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series15 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea15 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend15 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series16 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea16 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend16 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series17 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea17 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend17 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series18 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea18 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend18 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series19 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea19 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend19 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series20 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Auditpnl = New System.Windows.Forms.Panel()
@@ -97,16 +118,23 @@ Partial Class Dashboard
         Me.TabPage11 = New System.Windows.Forms.TabPage()
         Me.totalordersplaced = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage12 = New System.Windows.Forms.TabPage()
-        Me.tus = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TUSCHART = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage13 = New System.Windows.Forms.TabPage()
+        Me.OFRchart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage14 = New System.Windows.Forms.TabPage()
+        Me.altChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage15 = New System.Windows.Forms.TabPage()
+        Me.spendingChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage16 = New System.Windows.Forms.TabPage()
-        Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.paymentTermsChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage17 = New System.Windows.Forms.TabPage()
+        Me.outstandingPaymentsChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage18 = New System.Windows.Forms.TabPage()
+        Me.suprate = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage19 = New System.Windows.Forms.TabPage()
+        Me.PSSchart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage20 = New System.Windows.Forms.TabPage()
+        Me.IssuesChart = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -210,9 +238,23 @@ Partial Class Dashboard
         Me.TabPage11.SuspendLayout()
         CType(Me.totalordersplaced, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage12.SuspendLayout()
-        CType(Me.tus, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TUSCHART, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage13.SuspendLayout()
+        CType(Me.OFRchart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage14.SuspendLayout()
+        CType(Me.altChart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage15.SuspendLayout()
+        CType(Me.spendingChart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage16.SuspendLayout()
-        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.paymentTermsChart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage17.SuspendLayout()
+        CType(Me.outstandingPaymentsChart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage18.SuspendLayout()
+        CType(Me.suprate, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage19.SuspendLayout()
+        CType(Me.PSSchart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage20.SuspendLayout()
+        CType(Me.IssuesChart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.supplieraddpanel.SuspendLayout()
         Me.supplierspnl.SuspendLayout()
@@ -332,7 +374,7 @@ Partial Class Dashboard
         Me.repslbl.AutoSize = True
         Me.repslbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.repslbl.ForeColor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.repslbl.Location = New System.Drawing.Point(10, 25)
+        Me.repslbl.Location = New System.Drawing.Point(10, 2)
         Me.repslbl.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.repslbl.Name = "repslbl"
         Me.repslbl.Size = New System.Drawing.Size(98, 29)
@@ -356,10 +398,10 @@ Partial Class Dashboard
         '
         Me.TabControl2.Controls.Add(Me.TabPage8)
         Me.TabControl2.Controls.Add(Me.TabPage9)
-        Me.TabControl2.Location = New System.Drawing.Point(15, 57)
+        Me.TabControl2.Location = New System.Drawing.Point(10, 34)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(626, 364)
+        Me.TabControl2.Size = New System.Drawing.Size(633, 386)
         Me.TabControl2.TabIndex = 10
         '
         'TabPage8
@@ -368,7 +410,7 @@ Partial Class Dashboard
         Me.TabPage8.Location = New System.Drawing.Point(4, 22)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(618, 338)
+        Me.TabPage8.Size = New System.Drawing.Size(625, 360)
         Me.TabPage8.TabIndex = 0
         Me.TabPage8.Text = "Product"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -386,7 +428,7 @@ Partial Class Dashboard
         Me.TabControl1.Location = New System.Drawing.Point(1, 3)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(617, 337)
+        Me.TabControl1.Size = New System.Drawing.Size(617, 358)
         Me.TabControl1.TabIndex = 9
         '
         'Stocks
@@ -395,7 +437,7 @@ Partial Class Dashboard
         Me.Stocks.Location = New System.Drawing.Point(4, 22)
         Me.Stocks.Name = "Stocks"
         Me.Stocks.Padding = New System.Windows.Forms.Padding(3)
-        Me.Stocks.Size = New System.Drawing.Size(609, 311)
+        Me.Stocks.Size = New System.Drawing.Size(609, 332)
         Me.Stocks.TabIndex = 0
         Me.Stocks.Text = "Current stock"
         Me.Stocks.UseVisualStyleBackColor = True
@@ -422,7 +464,7 @@ Partial Class Dashboard
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(609, 311)
+        Me.TabPage2.Size = New System.Drawing.Size(609, 332)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Reorder Level"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -443,7 +485,7 @@ Partial Class Dashboard
         Series3.Name = "Series2"
         Me.reorderchart.Series.Add(Series2)
         Me.reorderchart.Series.Add(Series3)
-        Me.reorderchart.Size = New System.Drawing.Size(606, 308)
+        Me.reorderchart.Size = New System.Drawing.Size(605, 330)
         Me.reorderchart.TabIndex = 0
         Me.reorderchart.Text = "Chart1"
         '
@@ -452,7 +494,7 @@ Partial Class Dashboard
         Me.TabPage1.Controls.Add(Me.restockstatus)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(609, 311)
+        Me.TabPage1.Size = New System.Drawing.Size(609, 332)
         Me.TabPage1.TabIndex = 2
         Me.TabPage1.Text = "Restock Status"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -469,7 +511,7 @@ Partial Class Dashboard
         Series4.Legend = "Legend1"
         Series4.Name = "Series1"
         Me.restockstatus.Series.Add(Series4)
-        Me.restockstatus.Size = New System.Drawing.Size(608, 310)
+        Me.restockstatus.Size = New System.Drawing.Size(608, 329)
         Me.restockstatus.TabIndex = 0
         Me.restockstatus.Text = "Chart1"
         '
@@ -478,7 +520,7 @@ Partial Class Dashboard
         Me.TabPage3.Controls.Add(Me.strecevied)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(609, 311)
+        Me.TabPage3.Size = New System.Drawing.Size(609, 332)
         Me.TabPage3.TabIndex = 3
         Me.TabPage3.Text = "Stock Received"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -495,7 +537,7 @@ Partial Class Dashboard
         Series5.Legend = "Legend1"
         Series5.Name = "Series1"
         Me.strecevied.Series.Add(Series5)
-        Me.strecevied.Size = New System.Drawing.Size(605, 303)
+        Me.strecevied.Size = New System.Drawing.Size(605, 329)
         Me.strecevied.TabIndex = 0
         Me.strecevied.Text = "Chart1"
         '
@@ -504,7 +546,7 @@ Partial Class Dashboard
         Me.TabPage4.Controls.Add(Me.expirychart)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(609, 311)
+        Me.TabPage4.Size = New System.Drawing.Size(609, 332)
         Me.TabPage4.TabIndex = 4
         Me.TabPage4.Text = "Expiry Date"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -521,7 +563,7 @@ Partial Class Dashboard
         Series6.Legend = "Legend1"
         Series6.Name = "Series1"
         Me.expirychart.Series.Add(Series6)
-        Me.expirychart.Size = New System.Drawing.Size(603, 300)
+        Me.expirychart.Size = New System.Drawing.Size(603, 329)
         Me.expirychart.TabIndex = 0
         Me.expirychart.Text = "Chart1"
         '
@@ -530,7 +572,7 @@ Partial Class Dashboard
         Me.TabPage5.Controls.Add(Me.Chart2)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(609, 311)
+        Me.TabPage5.Size = New System.Drawing.Size(609, 332)
         Me.TabPage5.TabIndex = 5
         Me.TabPage5.Text = "Total Value"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -541,13 +583,13 @@ Partial Class Dashboard
         Me.Chart2.ChartAreas.Add(ChartArea6)
         Legend6.Name = "Legend1"
         Me.Chart2.Legends.Add(Legend6)
-        Me.Chart2.Location = New System.Drawing.Point(3, 6)
+        Me.Chart2.Location = New System.Drawing.Point(3, 0)
         Me.Chart2.Name = "Chart2"
         Series7.ChartArea = "ChartArea1"
         Series7.Legend = "Legend1"
         Series7.Name = "Series1"
         Me.Chart2.Series.Add(Series7)
-        Me.Chart2.Size = New System.Drawing.Size(599, 300)
+        Me.Chart2.Size = New System.Drawing.Size(599, 329)
         Me.Chart2.TabIndex = 0
         Me.Chart2.Text = "Chart2"
         '
@@ -556,7 +598,7 @@ Partial Class Dashboard
         Me.TabPage6.Controls.Add(Me.salesperfomance)
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Size = New System.Drawing.Size(609, 311)
+        Me.TabPage6.Size = New System.Drawing.Size(609, 332)
         Me.TabPage6.TabIndex = 6
         Me.TabPage6.Text = "Sales Performance"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -573,7 +615,7 @@ Partial Class Dashboard
         Series8.Legend = "Legend1"
         Series8.Name = "Series1"
         Me.salesperfomance.Series.Add(Series8)
-        Me.salesperfomance.Size = New System.Drawing.Size(603, 300)
+        Me.salesperfomance.Size = New System.Drawing.Size(603, 326)
         Me.salesperfomance.TabIndex = 0
         Me.salesperfomance.Text = "Chart1"
         '
@@ -582,7 +624,7 @@ Partial Class Dashboard
         Me.TabPage7.Controls.Add(Me.waste)
         Me.TabPage7.Location = New System.Drawing.Point(4, 22)
         Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Size = New System.Drawing.Size(609, 311)
+        Me.TabPage7.Size = New System.Drawing.Size(609, 332)
         Me.TabPage7.TabIndex = 7
         Me.TabPage7.Text = "Wastage"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -593,13 +635,13 @@ Partial Class Dashboard
         Me.waste.ChartAreas.Add(ChartArea8)
         Legend8.Name = "Legend1"
         Me.waste.Legends.Add(Legend8)
-        Me.waste.Location = New System.Drawing.Point(3, 8)
+        Me.waste.Location = New System.Drawing.Point(3, 3)
         Me.waste.Name = "waste"
         Series9.ChartArea = "ChartArea1"
         Series9.Legend = "Legend1"
         Series9.Name = "Series1"
         Me.waste.Series.Add(Series9)
-        Me.waste.Size = New System.Drawing.Size(603, 300)
+        Me.waste.Size = New System.Drawing.Size(604, 326)
         Me.waste.TabIndex = 0
         Me.waste.Text = "Chart1"
         '
@@ -609,7 +651,7 @@ Partial Class Dashboard
         Me.TabPage9.Location = New System.Drawing.Point(4, 22)
         Me.TabPage9.Name = "TabPage9"
         Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage9.Size = New System.Drawing.Size(618, 338)
+        Me.TabPage9.Size = New System.Drawing.Size(625, 360)
         Me.TabPage9.TabIndex = 1
         Me.TabPage9.Text = "Supplier"
         Me.TabPage9.UseVisualStyleBackColor = True
@@ -630,7 +672,7 @@ Partial Class Dashboard
         Me.TabControl3.Location = New System.Drawing.Point(3, 5)
         Me.TabControl3.Name = "TabControl3"
         Me.TabControl3.SelectedIndex = 0
-        Me.TabControl3.Size = New System.Drawing.Size(615, 337)
+        Me.TabControl3.Size = New System.Drawing.Size(624, 356)
         Me.TabControl3.TabIndex = 0
         '
         'TabPage10
@@ -639,7 +681,7 @@ Partial Class Dashboard
         Me.TabPage10.Location = New System.Drawing.Point(4, 22)
         Me.TabPage10.Name = "TabPage10"
         Me.TabPage10.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage10.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage10.Size = New System.Drawing.Size(616, 330)
         Me.TabPage10.TabIndex = 0
         Me.TabPage10.Text = "Products Supplied"
         Me.TabPage10.UseVisualStyleBackColor = True
@@ -666,7 +708,7 @@ Partial Class Dashboard
         Me.TabPage11.Location = New System.Drawing.Point(4, 22)
         Me.TabPage11.Name = "TabPage11"
         Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage11.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage11.Size = New System.Drawing.Size(616, 330)
         Me.TabPage11.TabIndex = 1
         Me.TabPage11.Text = "Total Orders Placed"
         Me.TabPage11.UseVisualStyleBackColor = True
@@ -677,130 +719,249 @@ Partial Class Dashboard
         Me.totalordersplaced.ChartAreas.Add(ChartArea10)
         Legend10.Name = "Legend1"
         Me.totalordersplaced.Legends.Add(Legend10)
-        Me.totalordersplaced.Location = New System.Drawing.Point(3, 9)
+        Me.totalordersplaced.Location = New System.Drawing.Point(1, 3)
         Me.totalordersplaced.Name = "totalordersplaced"
         Series11.ChartArea = "ChartArea1"
         Series11.Legend = "Legend1"
         Series11.Name = "Series1"
         Me.totalordersplaced.Series.Add(Series11)
-        Me.totalordersplaced.Size = New System.Drawing.Size(598, 300)
+        Me.totalordersplaced.Size = New System.Drawing.Size(612, 324)
         Me.totalordersplaced.TabIndex = 0
         Me.totalordersplaced.Text = "Chart1"
         '
         'TabPage12
         '
-        Me.TabPage12.Controls.Add(Me.tus)
+        Me.TabPage12.Controls.Add(Me.TUSCHART)
         Me.TabPage12.Location = New System.Drawing.Point(4, 22)
         Me.TabPage12.Name = "TabPage12"
-        Me.TabPage12.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage12.Size = New System.Drawing.Size(616, 330)
         Me.TabPage12.TabIndex = 2
         Me.TabPage12.Text = "Total Units Supplied"
         Me.TabPage12.UseVisualStyleBackColor = True
         '
-        'tus
+        'TUSCHART
         '
         ChartArea11.Name = "ChartArea1"
-        Me.tus.ChartAreas.Add(ChartArea11)
+        Me.TUSCHART.ChartAreas.Add(ChartArea11)
         Legend11.Name = "Legend1"
-        Me.tus.Legends.Add(Legend11)
-        Me.tus.Location = New System.Drawing.Point(6, 5)
-        Me.tus.Name = "tus"
+        Me.TUSCHART.Legends.Add(Legend11)
+        Me.TUSCHART.Location = New System.Drawing.Point(6, 5)
+        Me.TUSCHART.Name = "TUSCHART"
         Series12.ChartArea = "ChartArea1"
         Series12.Legend = "Legend1"
         Series12.Name = "Series1"
-        Me.tus.Series.Add(Series12)
-        Me.tus.Size = New System.Drawing.Size(594, 300)
-        Me.tus.TabIndex = 0
-        Me.tus.Text = "Chart1"
+        Me.TUSCHART.Series.Add(Series12)
+        Me.TUSCHART.Size = New System.Drawing.Size(607, 322)
+        Me.TUSCHART.TabIndex = 0
+        Me.TUSCHART.Text = "Chart1"
         '
         'TabPage13
         '
+        Me.TabPage13.Controls.Add(Me.OFRchart)
         Me.TabPage13.Location = New System.Drawing.Point(4, 22)
         Me.TabPage13.Name = "TabPage13"
-        Me.TabPage13.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage13.Size = New System.Drawing.Size(616, 330)
         Me.TabPage13.TabIndex = 3
         Me.TabPage13.Text = "Order Fulfillment Rate"
         Me.TabPage13.UseVisualStyleBackColor = True
         '
+        'OFRchart
+        '
+        ChartArea12.Name = "ChartArea1"
+        Me.OFRchart.ChartAreas.Add(ChartArea12)
+        Legend12.Name = "Legend1"
+        Me.OFRchart.Legends.Add(Legend12)
+        Me.OFRchart.Location = New System.Drawing.Point(6, 4)
+        Me.OFRchart.Name = "OFRchart"
+        Series13.ChartArea = "ChartArea1"
+        Series13.Legend = "Legend1"
+        Series13.Name = "Series1"
+        Me.OFRchart.Series.Add(Series13)
+        Me.OFRchart.Size = New System.Drawing.Size(607, 326)
+        Me.OFRchart.TabIndex = 0
+        Me.OFRchart.Text = "Chart1"
+        '
         'TabPage14
         '
+        Me.TabPage14.Controls.Add(Me.altChart)
         Me.TabPage14.Location = New System.Drawing.Point(4, 22)
         Me.TabPage14.Name = "TabPage14"
-        Me.TabPage14.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage14.Size = New System.Drawing.Size(616, 330)
         Me.TabPage14.TabIndex = 4
         Me.TabPage14.Text = "Average Lead Time"
         Me.TabPage14.UseVisualStyleBackColor = True
         '
+        'altChart
+        '
+        ChartArea13.Name = "ChartArea1"
+        Me.altChart.ChartAreas.Add(ChartArea13)
+        Legend13.Name = "Legend1"
+        Me.altChart.Legends.Add(Legend13)
+        Me.altChart.Location = New System.Drawing.Point(3, 3)
+        Me.altChart.Name = "altChart"
+        Series14.ChartArea = "ChartArea1"
+        Series14.Legend = "Legend1"
+        Series14.Name = "Series1"
+        Me.altChart.Series.Add(Series14)
+        Me.altChart.Size = New System.Drawing.Size(610, 327)
+        Me.altChart.TabIndex = 0
+        Me.altChart.Text = "Chart1"
+        '
         'TabPage15
         '
+        Me.TabPage15.Controls.Add(Me.spendingChart)
         Me.TabPage15.Location = New System.Drawing.Point(4, 22)
         Me.TabPage15.Name = "TabPage15"
-        Me.TabPage15.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage15.Size = New System.Drawing.Size(616, 330)
         Me.TabPage15.TabIndex = 5
         Me.TabPage15.Text = "Total Spending"
         Me.TabPage15.UseVisualStyleBackColor = True
         '
+        'spendingChart
+        '
+        ChartArea14.Name = "ChartArea1"
+        Me.spendingChart.ChartAreas.Add(ChartArea14)
+        Legend14.Name = "Legend1"
+        Me.spendingChart.Legends.Add(Legend14)
+        Me.spendingChart.Location = New System.Drawing.Point(3, 3)
+        Me.spendingChart.Name = "spendingChart"
+        Series15.ChartArea = "ChartArea1"
+        Series15.Legend = "Legend1"
+        Series15.Name = "Series1"
+        Me.spendingChart.Series.Add(Series15)
+        Me.spendingChart.Size = New System.Drawing.Size(613, 327)
+        Me.spendingChart.TabIndex = 0
+        Me.spendingChart.Text = "Chart1"
+        '
         'TabPage16
         '
-        Me.TabPage16.Controls.Add(Me.Chart3)
+        Me.TabPage16.Controls.Add(Me.paymentTermsChart)
         Me.TabPage16.Location = New System.Drawing.Point(4, 22)
         Me.TabPage16.Name = "TabPage16"
-        Me.TabPage16.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage16.Size = New System.Drawing.Size(616, 330)
         Me.TabPage16.TabIndex = 6
         Me.TabPage16.Text = "Payment Terms"
         Me.TabPage16.UseVisualStyleBackColor = True
         '
-        'Chart3
+        'paymentTermsChart
         '
-        ChartArea12.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea12)
-        Legend12.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend12)
-        Me.Chart3.Location = New System.Drawing.Point(3, 5)
-        Me.Chart3.Name = "Chart3"
-        Series13.ChartArea = "ChartArea1"
-        Series13.Legend = "Legend1"
-        Series13.Name = "Series1"
-        Me.Chart3.Series.Add(Series13)
-        Me.Chart3.Size = New System.Drawing.Size(601, 300)
-        Me.Chart3.TabIndex = 0
-        Me.Chart3.Text = "Chart3"
+        ChartArea15.Name = "ChartArea1"
+        Me.paymentTermsChart.ChartAreas.Add(ChartArea15)
+        Legend15.Name = "Legend1"
+        Me.paymentTermsChart.Legends.Add(Legend15)
+        Me.paymentTermsChart.Location = New System.Drawing.Point(3, 5)
+        Me.paymentTermsChart.Name = "paymentTermsChart"
+        Series16.ChartArea = "ChartArea1"
+        Series16.Legend = "Legend1"
+        Series16.Name = "Series1"
+        Me.paymentTermsChart.Series.Add(Series16)
+        Me.paymentTermsChart.Size = New System.Drawing.Size(610, 325)
+        Me.paymentTermsChart.TabIndex = 0
+        Me.paymentTermsChart.Text = "Chart3"
         '
         'TabPage17
         '
+        Me.TabPage17.Controls.Add(Me.outstandingPaymentsChart)
         Me.TabPage17.Location = New System.Drawing.Point(4, 22)
         Me.TabPage17.Name = "TabPage17"
-        Me.TabPage17.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage17.Size = New System.Drawing.Size(616, 330)
         Me.TabPage17.TabIndex = 7
         Me.TabPage17.Text = "Outstanding Payments"
         Me.TabPage17.UseVisualStyleBackColor = True
         '
+        'outstandingPaymentsChart
+        '
+        ChartArea16.Name = "ChartArea1"
+        Me.outstandingPaymentsChart.ChartAreas.Add(ChartArea16)
+        Legend16.Name = "Legend1"
+        Me.outstandingPaymentsChart.Legends.Add(Legend16)
+        Me.outstandingPaymentsChart.Location = New System.Drawing.Point(6, 5)
+        Me.outstandingPaymentsChart.Name = "outstandingPaymentsChart"
+        Series17.ChartArea = "ChartArea1"
+        Series17.Legend = "Legend1"
+        Series17.Name = "Series1"
+        Me.outstandingPaymentsChart.Series.Add(Series17)
+        Me.outstandingPaymentsChart.Size = New System.Drawing.Size(594, 325)
+        Me.outstandingPaymentsChart.TabIndex = 0
+        Me.outstandingPaymentsChart.Text = "Chart1"
+        '
         'TabPage18
         '
+        Me.TabPage18.Controls.Add(Me.suprate)
         Me.TabPage18.Location = New System.Drawing.Point(4, 22)
         Me.TabPage18.Name = "TabPage18"
-        Me.TabPage18.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage18.Size = New System.Drawing.Size(616, 330)
         Me.TabPage18.TabIndex = 8
         Me.TabPage18.Text = "Supplier Rating"
         Me.TabPage18.UseVisualStyleBackColor = True
         '
+        'suprate
+        '
+        ChartArea17.Name = "ChartArea1"
+        Me.suprate.ChartAreas.Add(ChartArea17)
+        Legend17.Name = "Legend1"
+        Me.suprate.Legends.Add(Legend17)
+        Me.suprate.Location = New System.Drawing.Point(0, 0)
+        Me.suprate.Name = "suprate"
+        Series18.ChartArea = "ChartArea1"
+        Series18.Legend = "Legend1"
+        Series18.Name = "Series1"
+        Me.suprate.Series.Add(Series18)
+        Me.suprate.Size = New System.Drawing.Size(618, 330)
+        Me.suprate.TabIndex = 0
+        Me.suprate.Text = "Chart1"
+        '
         'TabPage19
         '
+        Me.TabPage19.Controls.Add(Me.PSSchart)
         Me.TabPage19.Location = New System.Drawing.Point(4, 22)
         Me.TabPage19.Name = "TabPage19"
-        Me.TabPage19.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage19.Size = New System.Drawing.Size(616, 330)
         Me.TabPage19.TabIndex = 9
         Me.TabPage19.Text = "Preferred Supplier Status"
         Me.TabPage19.UseVisualStyleBackColor = True
         '
+        'PSSchart
+        '
+        ChartArea18.Name = "ChartArea1"
+        Me.PSSchart.ChartAreas.Add(ChartArea18)
+        Legend18.Name = "Legend1"
+        Me.PSSchart.Legends.Add(Legend18)
+        Me.PSSchart.Location = New System.Drawing.Point(3, 3)
+        Me.PSSchart.Name = "PSSchart"
+        Series19.ChartArea = "ChartArea1"
+        Series19.Legend = "Legend1"
+        Series19.Name = "Series1"
+        Me.PSSchart.Series.Add(Series19)
+        Me.PSSchart.Size = New System.Drawing.Size(609, 330)
+        Me.PSSchart.TabIndex = 0
+        Me.PSSchart.Text = "Chart1"
+        '
         'TabPage20
         '
+        Me.TabPage20.Controls.Add(Me.IssuesChart)
         Me.TabPage20.Location = New System.Drawing.Point(4, 22)
         Me.TabPage20.Name = "TabPage20"
-        Me.TabPage20.Size = New System.Drawing.Size(607, 311)
+        Me.TabPage20.Size = New System.Drawing.Size(616, 330)
         Me.TabPage20.TabIndex = 10
         Me.TabPage20.Text = "Issues Reported"
         Me.TabPage20.UseVisualStyleBackColor = True
+        '
+        'IssuesChart
+        '
+        ChartArea19.Name = "ChartArea1"
+        Me.IssuesChart.ChartAreas.Add(ChartArea19)
+        Legend19.Name = "Legend1"
+        Me.IssuesChart.Legends.Add(Legend19)
+        Me.IssuesChart.Location = New System.Drawing.Point(3, 2)
+        Me.IssuesChart.Name = "IssuesChart"
+        Series20.ChartArea = "ChartArea1"
+        Series20.Legend = "Legend1"
+        Series20.Name = "Series1"
+        Me.IssuesChart.Series.Add(Series20)
+        Me.IssuesChart.Size = New System.Drawing.Size(613, 328)
+        Me.IssuesChart.TabIndex = 0
+        Me.IssuesChart.Text = "Chart1"
         '
         'DataGridView3
         '
@@ -1511,10 +1672,10 @@ Partial Class Dashboard
         Me.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReports.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReports.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnReports.Location = New System.Drawing.Point(0, 231)
+        Me.btnReports.Location = New System.Drawing.Point(0, 227)
         Me.btnReports.Margin = New System.Windows.Forms.Padding(2)
         Me.btnReports.Name = "btnReports"
-        Me.btnReports.Size = New System.Drawing.Size(144, 36)
+        Me.btnReports.Size = New System.Drawing.Size(144, 31)
         Me.btnReports.TabIndex = 7
         Me.btnReports.Text = "Reports"
         Me.btnReports.UseVisualStyleBackColor = True
@@ -1535,7 +1696,7 @@ Partial Class Dashboard
         Me.btnAdjnTrans.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAdjnTrans.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdjnTrans.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnAdjnTrans.Location = New System.Drawing.Point(0, 277)
+        Me.btnAdjnTrans.Location = New System.Drawing.Point(0, 261)
         Me.btnAdjnTrans.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAdjnTrans.Name = "btnAdjnTrans"
         Me.btnAdjnTrans.Size = New System.Drawing.Size(144, 39)
@@ -1549,7 +1710,7 @@ Partial Class Dashboard
         Me.btnAudit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAudit.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAudit.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.btnAudit.Location = New System.Drawing.Point(0, 324)
+        Me.btnAudit.Location = New System.Drawing.Point(0, 304)
         Me.btnAudit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAudit.Name = "btnAudit"
         Me.btnAudit.Size = New System.Drawing.Size(144, 36)
@@ -1570,14 +1731,14 @@ Partial Class Dashboard
         Me.navigationpnl.Controls.Add(Me.Label3)
         Me.navigationpnl.Controls.Add(Me.Label2)
         Me.navigationpnl.Controls.Add(Me.btnDashboard)
-        Me.navigationpnl.Controls.Add(Me.Label28)
-        Me.navigationpnl.Controls.Add(Me.btnReports)
         Me.navigationpnl.Controls.Add(Me.btnAdjnTrans)
         Me.navigationpnl.Controls.Add(Me.Label31)
         Me.navigationpnl.Controls.Add(Me.Label1)
         Me.navigationpnl.Controls.Add(Me.btnProducts)
         Me.navigationpnl.Controls.Add(Me.Label29)
+        Me.navigationpnl.Controls.Add(Me.btnReports)
         Me.navigationpnl.Controls.Add(Me.Label30)
+        Me.navigationpnl.Controls.Add(Me.Label28)
         Me.navigationpnl.Dock = System.Windows.Forms.DockStyle.Left
         Me.navigationpnl.Location = New System.Drawing.Point(0, 0)
         Me.navigationpnl.Margin = New System.Windows.Forms.Padding(2)
@@ -1620,7 +1781,7 @@ Partial Class Dashboard
         'Label31
         '
         Me.Label31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Label31.Location = New System.Drawing.Point(2, 306)
+        Me.Label31.Location = New System.Drawing.Point(2, 291)
         Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(144, 16)
@@ -1640,7 +1801,7 @@ Partial Class Dashboard
         'Label30
         '
         Me.Label30.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Label30.Location = New System.Drawing.Point(0, 259)
+        Me.Label30.Location = New System.Drawing.Point(0, 247)
         Me.Label30.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(144, 16)
@@ -1709,9 +1870,23 @@ Partial Class Dashboard
         Me.TabPage11.ResumeLayout(False)
         CType(Me.totalordersplaced, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage12.ResumeLayout(False)
-        CType(Me.tus, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TUSCHART, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage13.ResumeLayout(False)
+        CType(Me.OFRchart, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage14.ResumeLayout(False)
+        CType(Me.altChart, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage15.ResumeLayout(False)
+        CType(Me.spendingChart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage16.ResumeLayout(False)
-        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.paymentTermsChart, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage17.ResumeLayout(False)
+        CType(Me.outstandingPaymentsChart, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage18.ResumeLayout(False)
+        CType(Me.suprate, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage19.ResumeLayout(False)
+        CType(Me.PSSchart, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage20.ResumeLayout(False)
+        CType(Me.IssuesChart, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.supplieraddpanel.ResumeLayout(False)
         Me.supplieraddpanel.PerformLayout()
@@ -1845,7 +2020,14 @@ Partial Class Dashboard
     Friend WithEvents TabPage18 As TabPage
     Friend WithEvents TabPage19 As TabPage
     Friend WithEvents TabPage20 As TabPage
-    Friend WithEvents Chart3 As DataVisualization.Charting.Chart
+    Friend WithEvents paymentTermsChart As DataVisualization.Charting.Chart
     Friend WithEvents totalordersplaced As DataVisualization.Charting.Chart
-    Friend WithEvents tus As DataVisualization.Charting.Chart
+    Friend WithEvents TUSCHART As DataVisualization.Charting.Chart
+    Friend WithEvents OFRchart As DataVisualization.Charting.Chart
+    Friend WithEvents altChart As DataVisualization.Charting.Chart
+    Friend WithEvents spendingChart As DataVisualization.Charting.Chart
+    Friend WithEvents outstandingPaymentsChart As DataVisualization.Charting.Chart
+    Friend WithEvents suprate As DataVisualization.Charting.Chart
+    Friend WithEvents PSSchart As DataVisualization.Charting.Chart
+    Friend WithEvents IssuesChart As DataVisualization.Charting.Chart
 End Class

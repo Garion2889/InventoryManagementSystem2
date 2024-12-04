@@ -60,7 +60,7 @@ Partial Class Login
         Me.errorlogin.AutoSize = True
         Me.errorlogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.errorlogin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.errorlogin.Location = New System.Drawing.Point(80, 291)
+        Me.errorlogin.Location = New System.Drawing.Point(80, 281)
         Me.errorlogin.Name = "errorlogin"
         Me.errorlogin.Size = New System.Drawing.Size(151, 13)
         Me.errorlogin.TabIndex = 7
@@ -83,7 +83,7 @@ Partial Class Login
         Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(126, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(80, 317)
+        Me.btnLogin.Location = New System.Drawing.Point(80, 296)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(161, 26)
@@ -98,7 +98,7 @@ Partial Class Login
         Me.txtPassword.Location = New System.Drawing.Point(80, 256)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(46)
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(203, 23)
         Me.txtPassword.TabIndex = 4
         '
