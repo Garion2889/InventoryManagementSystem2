@@ -1,5 +1,4 @@
-﻿Imports System.Data.SqlClient
-Imports System.IO
+﻿Imports System.IO
 Imports System.Windows.Forms.DataVisualization.Charting
 Imports MySql.Data.MySqlClient
 
