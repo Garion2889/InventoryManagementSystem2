@@ -86,7 +86,7 @@ Partial Class Login
         Me.btnLogin.Location = New System.Drawing.Point(80, 296)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(161, 26)
+        Me.btnLogin.Size = New System.Drawing.Size(161, 29)
         Me.btnLogin.TabIndex = 5
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
@@ -98,7 +98,6 @@ Partial Class Login
         Me.txtPassword.Location = New System.Drawing.Point(80, 256)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(203, 23)
         Me.txtPassword.TabIndex = 4
         '

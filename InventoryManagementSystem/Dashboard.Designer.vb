@@ -22,66 +22,63 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series7 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea7 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend7 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series8 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea8 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend8 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series10 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea10 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend10 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series11 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea11 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend11 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series12 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea12 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend12 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series13 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea13 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend13 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series14 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea14 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend14 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series15 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea15 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend15 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series16 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea16 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend16 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series17 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea17 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend17 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series18 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea18 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend18 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series19 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim ChartArea19 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend19 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series20 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea20 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend20 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series21 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea21 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend21 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series22 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea22 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend22 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series23 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea23 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend23 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series24 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea24 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend24 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series25 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea25 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend25 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series26 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea26 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend26 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series27 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea27 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend27 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series28 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea28 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend28 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series29 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea29 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend29 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series30 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
+        Dim ChartArea30 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend30 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series31 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea31 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend31 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series32 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea32 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend32 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series33 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea33 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend33 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series34 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea34 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend34 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series35 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea35 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend35 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series36 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Series37 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea36 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend36 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series38 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Auditpnl = New System.Windows.Forms.Panel()
         Me.btnLoadLogs = New System.Windows.Forms.Button()
@@ -94,23 +91,6 @@ Partial Class Dashboard
         Me.Reportspnl = New System.Windows.Forms.Panel()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.Stocks = New System.Windows.Forms.TabPage()
-        Me.stocklevel = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.reorderchart = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.restockstatus = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.strecevied = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.expirychart = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.salesperfomance = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.waste = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.TabPage9 = New System.Windows.Forms.TabPage()
         Me.TabControl3 = New System.Windows.Forms.TabControl()
         Me.TabPage10 = New System.Windows.Forms.TabPage()
@@ -203,34 +183,35 @@ Partial Class Dashboard
         Me.navigationpnl = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Label28 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
         Me.dashboardpnl = New System.Windows.Forms.Panel()
+        Me.toastPanel = New System.Windows.Forms.Panel()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.salesperfomance = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.expirychart = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.strecevied = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.restockstatus = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.reorderchart = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Stocks = New System.Windows.Forms.TabPage()
+        Me.stocklevel = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.exportprdbtn = New System.Windows.Forms.Button()
+        Me.supplierexportbtn = New System.Windows.Forms.Button()
         Me.Auditpnl.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Adjntranspanl.SuspendLayout()
         Me.Reportspnl.SuspendLayout()
         Me.TabControl2.SuspendLayout()
         Me.TabPage8.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.Stocks.SuspendLayout()
-        CType(Me.stocklevel, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.reorderchart, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage1.SuspendLayout()
-        CType(Me.restockstatus, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage3.SuspendLayout()
-        CType(Me.strecevied, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage4.SuspendLayout()
-        CType(Me.expirychart, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage5.SuspendLayout()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage6.SuspendLayout()
-        CType(Me.salesperfomance, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage7.SuspendLayout()
-        CType(Me.waste, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage9.SuspendLayout()
         Me.TabControl3.SuspendLayout()
         Me.TabPage10.SuspendLayout()
@@ -264,6 +245,21 @@ Partial Class Dashboard
         Me.navigationpnl.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage6.SuspendLayout()
+        CType(Me.salesperfomance, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage5.SuspendLayout()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.expirychart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage3.SuspendLayout()
+        CType(Me.strecevied, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.restockstatus, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.reorderchart, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Stocks.SuspendLayout()
+        CType(Me.stocklevel, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label9
@@ -340,14 +336,14 @@ Partial Class Dashboard
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.Color.White
         Me.DataGridView1.Location = New System.Drawing.Point(10, 82)
@@ -415,236 +411,6 @@ Partial Class Dashboard
         Me.TabPage8.Text = "Product"
         Me.TabPage8.UseVisualStyleBackColor = True
         '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.Stocks)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
-        Me.TabControl1.Controls.Add(Me.TabPage5)
-        Me.TabControl1.Controls.Add(Me.TabPage6)
-        Me.TabControl1.Controls.Add(Me.TabPage7)
-        Me.TabControl1.Location = New System.Drawing.Point(1, 3)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(617, 358)
-        Me.TabControl1.TabIndex = 9
-        '
-        'Stocks
-        '
-        Me.Stocks.Controls.Add(Me.stocklevel)
-        Me.Stocks.Location = New System.Drawing.Point(4, 22)
-        Me.Stocks.Name = "Stocks"
-        Me.Stocks.Padding = New System.Windows.Forms.Padding(3)
-        Me.Stocks.Size = New System.Drawing.Size(609, 332)
-        Me.Stocks.TabIndex = 0
-        Me.Stocks.Text = "Current stock"
-        Me.Stocks.UseVisualStyleBackColor = True
-        '
-        'stocklevel
-        '
-        ChartArea1.Name = "ChartArea1"
-        Me.stocklevel.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.stocklevel.Legends.Add(Legend1)
-        Me.stocklevel.Location = New System.Drawing.Point(1, 5)
-        Me.stocklevel.Name = "stocklevel"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series"
-        Me.stocklevel.Series.Add(Series1)
-        Me.stocklevel.Size = New System.Drawing.Size(608, 300)
-        Me.stocklevel.TabIndex = 10
-        Me.stocklevel.Text = "Chart1"
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.reorderchart)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(609, 332)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Reorder Level"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'reorderchart
-        '
-        ChartArea2.Name = "ChartArea1"
-        Me.reorderchart.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.reorderchart.Legends.Add(Legend2)
-        Me.reorderchart.Location = New System.Drawing.Point(1, 2)
-        Me.reorderchart.Name = "reorderchart"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series2"
-        Me.reorderchart.Series.Add(Series2)
-        Me.reorderchart.Series.Add(Series3)
-        Me.reorderchart.Size = New System.Drawing.Size(605, 330)
-        Me.reorderchart.TabIndex = 0
-        Me.reorderchart.Text = "Chart1"
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.restockstatus)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(609, 332)
-        Me.TabPage1.TabIndex = 2
-        Me.TabPage1.Text = "Restock Status"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'restockstatus
-        '
-        ChartArea3.Name = "ChartArea1"
-        Me.restockstatus.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.restockstatus.Legends.Add(Legend3)
-        Me.restockstatus.Location = New System.Drawing.Point(1, 0)
-        Me.restockstatus.Name = "restockstatus"
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series1"
-        Me.restockstatus.Series.Add(Series4)
-        Me.restockstatus.Size = New System.Drawing.Size(608, 329)
-        Me.restockstatus.TabIndex = 0
-        Me.restockstatus.Text = "Chart1"
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.strecevied)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(609, 332)
-        Me.TabPage3.TabIndex = 3
-        Me.TabPage3.Text = "Stock Received"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'strecevied
-        '
-        ChartArea4.Name = "ChartArea1"
-        Me.strecevied.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.strecevied.Legends.Add(Legend4)
-        Me.strecevied.Location = New System.Drawing.Point(2, 3)
-        Me.strecevied.Name = "strecevied"
-        Series5.ChartArea = "ChartArea1"
-        Series5.Legend = "Legend1"
-        Series5.Name = "Series1"
-        Me.strecevied.Series.Add(Series5)
-        Me.strecevied.Size = New System.Drawing.Size(605, 329)
-        Me.strecevied.TabIndex = 0
-        Me.strecevied.Text = "Chart1"
-        '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.expirychart)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(609, 332)
-        Me.TabPage4.TabIndex = 4
-        Me.TabPage4.Text = "Expiry Date"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'expirychart
-        '
-        ChartArea5.Name = "ChartArea1"
-        Me.expirychart.ChartAreas.Add(ChartArea5)
-        Legend5.Name = "Legend1"
-        Me.expirychart.Legends.Add(Legend5)
-        Me.expirychart.Location = New System.Drawing.Point(3, 3)
-        Me.expirychart.Name = "expirychart"
-        Series6.ChartArea = "ChartArea1"
-        Series6.Legend = "Legend1"
-        Series6.Name = "Series1"
-        Me.expirychart.Series.Add(Series6)
-        Me.expirychart.Size = New System.Drawing.Size(603, 329)
-        Me.expirychart.TabIndex = 0
-        Me.expirychart.Text = "Chart1"
-        '
-        'TabPage5
-        '
-        Me.TabPage5.Controls.Add(Me.Chart2)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(609, 332)
-        Me.TabPage5.TabIndex = 5
-        Me.TabPage5.Text = "Total Value"
-        Me.TabPage5.UseVisualStyleBackColor = True
-        '
-        'Chart2
-        '
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea6)
-        Legend6.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend6)
-        Me.Chart2.Location = New System.Drawing.Point(3, 0)
-        Me.Chart2.Name = "Chart2"
-        Series7.ChartArea = "ChartArea1"
-        Series7.Legend = "Legend1"
-        Series7.Name = "Series1"
-        Me.Chart2.Series.Add(Series7)
-        Me.Chart2.Size = New System.Drawing.Size(599, 329)
-        Me.Chart2.TabIndex = 0
-        Me.Chart2.Text = "Chart2"
-        '
-        'TabPage6
-        '
-        Me.TabPage6.Controls.Add(Me.salesperfomance)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Size = New System.Drawing.Size(609, 332)
-        Me.TabPage6.TabIndex = 6
-        Me.TabPage6.Text = "Sales Performance"
-        Me.TabPage6.UseVisualStyleBackColor = True
-        '
-        'salesperfomance
-        '
-        ChartArea7.Name = "ChartArea1"
-        Me.salesperfomance.ChartAreas.Add(ChartArea7)
-        Legend7.Name = "Legend1"
-        Me.salesperfomance.Legends.Add(Legend7)
-        Me.salesperfomance.Location = New System.Drawing.Point(3, 3)
-        Me.salesperfomance.Name = "salesperfomance"
-        Series8.ChartArea = "ChartArea1"
-        Series8.Legend = "Legend1"
-        Series8.Name = "Series1"
-        Me.salesperfomance.Series.Add(Series8)
-        Me.salesperfomance.Size = New System.Drawing.Size(603, 326)
-        Me.salesperfomance.TabIndex = 0
-        Me.salesperfomance.Text = "Chart1"
-        '
-        'TabPage7
-        '
-        Me.TabPage7.Controls.Add(Me.waste)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Size = New System.Drawing.Size(609, 332)
-        Me.TabPage7.TabIndex = 7
-        Me.TabPage7.Text = "Wastage"
-        Me.TabPage7.UseVisualStyleBackColor = True
-        '
-        'waste
-        '
-        ChartArea8.Name = "ChartArea1"
-        Me.waste.ChartAreas.Add(ChartArea8)
-        Legend8.Name = "Legend1"
-        Me.waste.Legends.Add(Legend8)
-        Me.waste.Location = New System.Drawing.Point(3, 3)
-        Me.waste.Name = "waste"
-        Series9.ChartArea = "ChartArea1"
-        Series9.Legend = "Legend1"
-        Series9.Name = "Series1"
-        Me.waste.Series.Add(Series9)
-        Me.waste.Size = New System.Drawing.Size(604, 326)
-        Me.waste.TabIndex = 0
-        Me.waste.Text = "Chart1"
-        '
         'TabPage9
         '
         Me.TabPage9.Controls.Add(Me.TabControl3)
@@ -688,16 +454,16 @@ Partial Class Dashboard
         '
         'productsupplier
         '
-        ChartArea9.Name = "ChartArea1"
-        Me.productsupplier.ChartAreas.Add(ChartArea9)
-        Legend9.Name = "Legend1"
-        Me.productsupplier.Legends.Add(Legend9)
+        ChartArea19.Name = "ChartArea1"
+        Me.productsupplier.ChartAreas.Add(ChartArea19)
+        Legend19.Name = "Legend1"
+        Me.productsupplier.Legends.Add(Legend19)
         Me.productsupplier.Location = New System.Drawing.Point(6, 11)
         Me.productsupplier.Name = "productsupplier"
-        Series10.ChartArea = "ChartArea1"
-        Series10.Legend = "Legend1"
-        Series10.Name = "Series1"
-        Me.productsupplier.Series.Add(Series10)
+        Series20.ChartArea = "ChartArea1"
+        Series20.Legend = "Legend1"
+        Series20.Name = "Series1"
+        Me.productsupplier.Series.Add(Series20)
         Me.productsupplier.Size = New System.Drawing.Size(594, 300)
         Me.productsupplier.TabIndex = 0
         Me.productsupplier.Text = "Chart1"
@@ -715,16 +481,16 @@ Partial Class Dashboard
         '
         'totalordersplaced
         '
-        ChartArea10.Name = "ChartArea1"
-        Me.totalordersplaced.ChartAreas.Add(ChartArea10)
-        Legend10.Name = "Legend1"
-        Me.totalordersplaced.Legends.Add(Legend10)
+        ChartArea20.Name = "ChartArea1"
+        Me.totalordersplaced.ChartAreas.Add(ChartArea20)
+        Legend20.Name = "Legend1"
+        Me.totalordersplaced.Legends.Add(Legend20)
         Me.totalordersplaced.Location = New System.Drawing.Point(1, 3)
         Me.totalordersplaced.Name = "totalordersplaced"
-        Series11.ChartArea = "ChartArea1"
-        Series11.Legend = "Legend1"
-        Series11.Name = "Series1"
-        Me.totalordersplaced.Series.Add(Series11)
+        Series21.ChartArea = "ChartArea1"
+        Series21.Legend = "Legend1"
+        Series21.Name = "Series1"
+        Me.totalordersplaced.Series.Add(Series21)
         Me.totalordersplaced.Size = New System.Drawing.Size(612, 324)
         Me.totalordersplaced.TabIndex = 0
         Me.totalordersplaced.Text = "Chart1"
@@ -741,16 +507,16 @@ Partial Class Dashboard
         '
         'TUSCHART
         '
-        ChartArea11.Name = "ChartArea1"
-        Me.TUSCHART.ChartAreas.Add(ChartArea11)
-        Legend11.Name = "Legend1"
-        Me.TUSCHART.Legends.Add(Legend11)
+        ChartArea21.Name = "ChartArea1"
+        Me.TUSCHART.ChartAreas.Add(ChartArea21)
+        Legend21.Name = "Legend1"
+        Me.TUSCHART.Legends.Add(Legend21)
         Me.TUSCHART.Location = New System.Drawing.Point(6, 5)
         Me.TUSCHART.Name = "TUSCHART"
-        Series12.ChartArea = "ChartArea1"
-        Series12.Legend = "Legend1"
-        Series12.Name = "Series1"
-        Me.TUSCHART.Series.Add(Series12)
+        Series22.ChartArea = "ChartArea1"
+        Series22.Legend = "Legend1"
+        Series22.Name = "Series1"
+        Me.TUSCHART.Series.Add(Series22)
         Me.TUSCHART.Size = New System.Drawing.Size(607, 322)
         Me.TUSCHART.TabIndex = 0
         Me.TUSCHART.Text = "Chart1"
@@ -767,16 +533,16 @@ Partial Class Dashboard
         '
         'OFRchart
         '
-        ChartArea12.Name = "ChartArea1"
-        Me.OFRchart.ChartAreas.Add(ChartArea12)
-        Legend12.Name = "Legend1"
-        Me.OFRchart.Legends.Add(Legend12)
+        ChartArea22.Name = "ChartArea1"
+        Me.OFRchart.ChartAreas.Add(ChartArea22)
+        Legend22.Name = "Legend1"
+        Me.OFRchart.Legends.Add(Legend22)
         Me.OFRchart.Location = New System.Drawing.Point(6, 4)
         Me.OFRchart.Name = "OFRchart"
-        Series13.ChartArea = "ChartArea1"
-        Series13.Legend = "Legend1"
-        Series13.Name = "Series1"
-        Me.OFRchart.Series.Add(Series13)
+        Series23.ChartArea = "ChartArea1"
+        Series23.Legend = "Legend1"
+        Series23.Name = "Series1"
+        Me.OFRchart.Series.Add(Series23)
         Me.OFRchart.Size = New System.Drawing.Size(607, 326)
         Me.OFRchart.TabIndex = 0
         Me.OFRchart.Text = "Chart1"
@@ -793,16 +559,16 @@ Partial Class Dashboard
         '
         'altChart
         '
-        ChartArea13.Name = "ChartArea1"
-        Me.altChart.ChartAreas.Add(ChartArea13)
-        Legend13.Name = "Legend1"
-        Me.altChart.Legends.Add(Legend13)
+        ChartArea23.Name = "ChartArea1"
+        Me.altChart.ChartAreas.Add(ChartArea23)
+        Legend23.Name = "Legend1"
+        Me.altChart.Legends.Add(Legend23)
         Me.altChart.Location = New System.Drawing.Point(3, 3)
         Me.altChart.Name = "altChart"
-        Series14.ChartArea = "ChartArea1"
-        Series14.Legend = "Legend1"
-        Series14.Name = "Series1"
-        Me.altChart.Series.Add(Series14)
+        Series24.ChartArea = "ChartArea1"
+        Series24.Legend = "Legend1"
+        Series24.Name = "Series1"
+        Me.altChart.Series.Add(Series24)
         Me.altChart.Size = New System.Drawing.Size(610, 327)
         Me.altChart.TabIndex = 0
         Me.altChart.Text = "Chart1"
@@ -819,16 +585,16 @@ Partial Class Dashboard
         '
         'spendingChart
         '
-        ChartArea14.Name = "ChartArea1"
-        Me.spendingChart.ChartAreas.Add(ChartArea14)
-        Legend14.Name = "Legend1"
-        Me.spendingChart.Legends.Add(Legend14)
+        ChartArea24.Name = "ChartArea1"
+        Me.spendingChart.ChartAreas.Add(ChartArea24)
+        Legend24.Name = "Legend1"
+        Me.spendingChart.Legends.Add(Legend24)
         Me.spendingChart.Location = New System.Drawing.Point(3, 3)
         Me.spendingChart.Name = "spendingChart"
-        Series15.ChartArea = "ChartArea1"
-        Series15.Legend = "Legend1"
-        Series15.Name = "Series1"
-        Me.spendingChart.Series.Add(Series15)
+        Series25.ChartArea = "ChartArea1"
+        Series25.Legend = "Legend1"
+        Series25.Name = "Series1"
+        Me.spendingChart.Series.Add(Series25)
         Me.spendingChart.Size = New System.Drawing.Size(613, 327)
         Me.spendingChart.TabIndex = 0
         Me.spendingChart.Text = "Chart1"
@@ -845,16 +611,16 @@ Partial Class Dashboard
         '
         'paymentTermsChart
         '
-        ChartArea15.Name = "ChartArea1"
-        Me.paymentTermsChart.ChartAreas.Add(ChartArea15)
-        Legend15.Name = "Legend1"
-        Me.paymentTermsChart.Legends.Add(Legend15)
+        ChartArea25.Name = "ChartArea1"
+        Me.paymentTermsChart.ChartAreas.Add(ChartArea25)
+        Legend25.Name = "Legend1"
+        Me.paymentTermsChart.Legends.Add(Legend25)
         Me.paymentTermsChart.Location = New System.Drawing.Point(3, 5)
         Me.paymentTermsChart.Name = "paymentTermsChart"
-        Series16.ChartArea = "ChartArea1"
-        Series16.Legend = "Legend1"
-        Series16.Name = "Series1"
-        Me.paymentTermsChart.Series.Add(Series16)
+        Series26.ChartArea = "ChartArea1"
+        Series26.Legend = "Legend1"
+        Series26.Name = "Series1"
+        Me.paymentTermsChart.Series.Add(Series26)
         Me.paymentTermsChart.Size = New System.Drawing.Size(610, 325)
         Me.paymentTermsChart.TabIndex = 0
         Me.paymentTermsChart.Text = "Chart3"
@@ -871,16 +637,16 @@ Partial Class Dashboard
         '
         'outstandingPaymentsChart
         '
-        ChartArea16.Name = "ChartArea1"
-        Me.outstandingPaymentsChart.ChartAreas.Add(ChartArea16)
-        Legend16.Name = "Legend1"
-        Me.outstandingPaymentsChart.Legends.Add(Legend16)
+        ChartArea26.Name = "ChartArea1"
+        Me.outstandingPaymentsChart.ChartAreas.Add(ChartArea26)
+        Legend26.Name = "Legend1"
+        Me.outstandingPaymentsChart.Legends.Add(Legend26)
         Me.outstandingPaymentsChart.Location = New System.Drawing.Point(6, 5)
         Me.outstandingPaymentsChart.Name = "outstandingPaymentsChart"
-        Series17.ChartArea = "ChartArea1"
-        Series17.Legend = "Legend1"
-        Series17.Name = "Series1"
-        Me.outstandingPaymentsChart.Series.Add(Series17)
+        Series27.ChartArea = "ChartArea1"
+        Series27.Legend = "Legend1"
+        Series27.Name = "Series1"
+        Me.outstandingPaymentsChart.Series.Add(Series27)
         Me.outstandingPaymentsChart.Size = New System.Drawing.Size(594, 325)
         Me.outstandingPaymentsChart.TabIndex = 0
         Me.outstandingPaymentsChart.Text = "Chart1"
@@ -897,16 +663,16 @@ Partial Class Dashboard
         '
         'suprate
         '
-        ChartArea17.Name = "ChartArea1"
-        Me.suprate.ChartAreas.Add(ChartArea17)
-        Legend17.Name = "Legend1"
-        Me.suprate.Legends.Add(Legend17)
+        ChartArea27.Name = "ChartArea1"
+        Me.suprate.ChartAreas.Add(ChartArea27)
+        Legend27.Name = "Legend1"
+        Me.suprate.Legends.Add(Legend27)
         Me.suprate.Location = New System.Drawing.Point(0, 0)
         Me.suprate.Name = "suprate"
-        Series18.ChartArea = "ChartArea1"
-        Series18.Legend = "Legend1"
-        Series18.Name = "Series1"
-        Me.suprate.Series.Add(Series18)
+        Series28.ChartArea = "ChartArea1"
+        Series28.Legend = "Legend1"
+        Series28.Name = "Series1"
+        Me.suprate.Series.Add(Series28)
         Me.suprate.Size = New System.Drawing.Size(618, 330)
         Me.suprate.TabIndex = 0
         Me.suprate.Text = "Chart1"
@@ -923,16 +689,16 @@ Partial Class Dashboard
         '
         'PSSchart
         '
-        ChartArea18.Name = "ChartArea1"
-        Me.PSSchart.ChartAreas.Add(ChartArea18)
-        Legend18.Name = "Legend1"
-        Me.PSSchart.Legends.Add(Legend18)
+        ChartArea28.Name = "ChartArea1"
+        Me.PSSchart.ChartAreas.Add(ChartArea28)
+        Legend28.Name = "Legend1"
+        Me.PSSchart.Legends.Add(Legend28)
         Me.PSSchart.Location = New System.Drawing.Point(3, 3)
         Me.PSSchart.Name = "PSSchart"
-        Series19.ChartArea = "ChartArea1"
-        Series19.Legend = "Legend1"
-        Series19.Name = "Series1"
-        Me.PSSchart.Series.Add(Series19)
+        Series29.ChartArea = "ChartArea1"
+        Series29.Legend = "Legend1"
+        Series29.Name = "Series1"
+        Me.PSSchart.Series.Add(Series29)
         Me.PSSchart.Size = New System.Drawing.Size(609, 330)
         Me.PSSchart.TabIndex = 0
         Me.PSSchart.Text = "Chart1"
@@ -949,16 +715,16 @@ Partial Class Dashboard
         '
         'IssuesChart
         '
-        ChartArea19.Name = "ChartArea1"
-        Me.IssuesChart.ChartAreas.Add(ChartArea19)
-        Legend19.Name = "Legend1"
-        Me.IssuesChart.Legends.Add(Legend19)
+        ChartArea29.Name = "ChartArea1"
+        Me.IssuesChart.ChartAreas.Add(ChartArea29)
+        Legend29.Name = "Legend1"
+        Me.IssuesChart.Legends.Add(Legend29)
         Me.IssuesChart.Location = New System.Drawing.Point(3, 2)
         Me.IssuesChart.Name = "IssuesChart"
-        Series20.ChartArea = "ChartArea1"
-        Series20.Legend = "Legend1"
-        Series20.Name = "Series1"
-        Me.IssuesChart.Series.Add(Series20)
+        Series30.ChartArea = "ChartArea1"
+        Series30.Legend = "Legend1"
+        Series30.Name = "Series1"
+        Me.IssuesChart.Series.Add(Series30)
         Me.IssuesChart.Size = New System.Drawing.Size(613, 328)
         Me.IssuesChart.TabIndex = 0
         Me.IssuesChart.Text = "Chart1"
@@ -1202,6 +968,7 @@ Partial Class Dashboard
         'supplierspnl
         '
         Me.supplierspnl.BackColor = System.Drawing.Color.White
+        Me.supplierspnl.Controls.Add(Me.supplierexportbtn)
         Me.supplierspnl.Controls.Add(Me.supplieraddpanel)
         Me.supplierspnl.Controls.Add(Me.btnDeleteSupplier)
         Me.supplierspnl.Controls.Add(Me.btnEditSupplier)
@@ -1563,6 +1330,7 @@ Partial Class Dashboard
         Me.pnlProducts.Controls.Add(Me.Label6)
         Me.pnlProducts.Controls.Add(Me.Label7)
         Me.pnlProducts.Controls.Add(Me.Button2)
+        Me.pnlProducts.Controls.Add(Me.exportprdbtn)
         Me.pnlProducts.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnlProducts.Location = New System.Drawing.Point(160, 14)
         Me.pnlProducts.Margin = New System.Windows.Forms.Padding(2)
@@ -1768,16 +1536,6 @@ Partial Class Dashboard
         Me.PictureBox3.TabIndex = 12
         Me.PictureBox3.TabStop = False
         '
-        'Label28
-        '
-        Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
-        Me.Label28.Location = New System.Drawing.Point(2, 172)
-        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(144, 16)
-        Me.Label28.TabIndex = 14
-        Me.Label28.Text = "_______________________________"
-        '
         'Label31
         '
         Me.Label31.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
@@ -1808,6 +1566,16 @@ Partial Class Dashboard
         Me.Label30.TabIndex = 16
         Me.Label30.Text = "_______________________________"
         '
+        'Label28
+        '
+        Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.Label28.Location = New System.Drawing.Point(2, 172)
+        Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(144, 16)
+        Me.Label28.TabIndex = 14
+        Me.Label28.Text = "_______________________________"
+        '
         'dashboardpnl
         '
         Me.dashboardpnl.BackgroundImage = Global.InventoryManagementSystem.My.Resources.Resources.Isleshop_logo_trasparent
@@ -1818,19 +1586,263 @@ Partial Class Dashboard
         Me.dashboardpnl.Size = New System.Drawing.Size(593, 382)
         Me.dashboardpnl.TabIndex = 1
         '
+        'toastPanel
+        '
+        Me.toastPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.toastPanel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.toastPanel.Location = New System.Drawing.Point(593, 363)
+        Me.toastPanel.Name = "toastPanel"
+        Me.toastPanel.Size = New System.Drawing.Size(227, 84)
+        Me.toastPanel.TabIndex = 0
+        Me.toastPanel.Visible = False
+        '
+        'TabPage6
+        '
+        Me.TabPage6.Controls.Add(Me.salesperfomance)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Size = New System.Drawing.Size(609, 332)
+        Me.TabPage6.TabIndex = 6
+        Me.TabPage6.Text = "Sales Performance"
+        Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'salesperfomance
+        '
+        ChartArea30.Name = "ChartArea1"
+        Me.salesperfomance.ChartAreas.Add(ChartArea30)
+        Legend30.Name = "Legend1"
+        Me.salesperfomance.Legends.Add(Legend30)
+        Me.salesperfomance.Location = New System.Drawing.Point(3, 3)
+        Me.salesperfomance.Name = "salesperfomance"
+        Series31.ChartArea = "ChartArea1"
+        Series31.Legend = "Legend1"
+        Series31.Name = "Series1"
+        Me.salesperfomance.Series.Add(Series31)
+        Me.salesperfomance.Size = New System.Drawing.Size(603, 326)
+        Me.salesperfomance.TabIndex = 0
+        Me.salesperfomance.Text = "Chart1"
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.Chart2)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Size = New System.Drawing.Size(609, 332)
+        Me.TabPage5.TabIndex = 5
+        Me.TabPage5.Text = "Total Value"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'Chart2
+        '
+        ChartArea31.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea31)
+        Legend31.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend31)
+        Me.Chart2.Location = New System.Drawing.Point(3, 0)
+        Me.Chart2.Name = "Chart2"
+        Series32.ChartArea = "ChartArea1"
+        Series32.Legend = "Legend1"
+        Series32.Name = "Series1"
+        Me.Chart2.Series.Add(Series32)
+        Me.Chart2.Size = New System.Drawing.Size(599, 329)
+        Me.Chart2.TabIndex = 0
+        Me.Chart2.Text = "Chart2"
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.expirychart)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Size = New System.Drawing.Size(609, 332)
+        Me.TabPage4.TabIndex = 4
+        Me.TabPage4.Text = "Expiry Date"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'expirychart
+        '
+        ChartArea32.Name = "ChartArea1"
+        Me.expirychart.ChartAreas.Add(ChartArea32)
+        Legend32.Name = "Legend1"
+        Me.expirychart.Legends.Add(Legend32)
+        Me.expirychart.Location = New System.Drawing.Point(3, 3)
+        Me.expirychart.Name = "expirychart"
+        Series33.ChartArea = "ChartArea1"
+        Series33.Legend = "Legend1"
+        Series33.Name = "Series1"
+        Me.expirychart.Series.Add(Series33)
+        Me.expirychart.Size = New System.Drawing.Size(603, 329)
+        Me.expirychart.TabIndex = 0
+        Me.expirychart.Text = "Chart1"
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.strecevied)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Size = New System.Drawing.Size(609, 332)
+        Me.TabPage3.TabIndex = 3
+        Me.TabPage3.Text = "Stock Received"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'strecevied
+        '
+        ChartArea33.Name = "ChartArea1"
+        Me.strecevied.ChartAreas.Add(ChartArea33)
+        Legend33.Name = "Legend1"
+        Me.strecevied.Legends.Add(Legend33)
+        Me.strecevied.Location = New System.Drawing.Point(2, 3)
+        Me.strecevied.Name = "strecevied"
+        Series34.ChartArea = "ChartArea1"
+        Series34.Legend = "Legend1"
+        Series34.Name = "Series1"
+        Me.strecevied.Series.Add(Series34)
+        Me.strecevied.Size = New System.Drawing.Size(605, 329)
+        Me.strecevied.TabIndex = 0
+        Me.strecevied.Text = "Chart1"
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.restockstatus)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Size = New System.Drawing.Size(609, 332)
+        Me.TabPage1.TabIndex = 2
+        Me.TabPage1.Text = "Restock Status"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'restockstatus
+        '
+        ChartArea34.Name = "ChartArea1"
+        Me.restockstatus.ChartAreas.Add(ChartArea34)
+        Legend34.Name = "Legend1"
+        Me.restockstatus.Legends.Add(Legend34)
+        Me.restockstatus.Location = New System.Drawing.Point(1, 0)
+        Me.restockstatus.Name = "restockstatus"
+        Series35.ChartArea = "ChartArea1"
+        Series35.Legend = "Legend1"
+        Series35.Name = "Series1"
+        Me.restockstatus.Series.Add(Series35)
+        Me.restockstatus.Size = New System.Drawing.Size(608, 329)
+        Me.restockstatus.TabIndex = 0
+        Me.restockstatus.Text = "Chart1"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.reorderchart)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(609, 332)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Reorder Level"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'reorderchart
+        '
+        ChartArea35.Name = "ChartArea1"
+        Me.reorderchart.ChartAreas.Add(ChartArea35)
+        Legend35.Name = "Legend1"
+        Me.reorderchart.Legends.Add(Legend35)
+        Me.reorderchart.Location = New System.Drawing.Point(1, 2)
+        Me.reorderchart.Name = "reorderchart"
+        Series36.ChartArea = "ChartArea1"
+        Series36.Legend = "Legend1"
+        Series36.Name = "Series1"
+        Series37.ChartArea = "ChartArea1"
+        Series37.Legend = "Legend1"
+        Series37.Name = "Series2"
+        Me.reorderchart.Series.Add(Series36)
+        Me.reorderchart.Series.Add(Series37)
+        Me.reorderchart.Size = New System.Drawing.Size(605, 330)
+        Me.reorderchart.TabIndex = 0
+        Me.reorderchart.Text = "Chart1"
+        '
+        'Stocks
+        '
+        Me.Stocks.Controls.Add(Me.stocklevel)
+        Me.Stocks.Location = New System.Drawing.Point(4, 22)
+        Me.Stocks.Name = "Stocks"
+        Me.Stocks.Padding = New System.Windows.Forms.Padding(3)
+        Me.Stocks.Size = New System.Drawing.Size(609, 332)
+        Me.Stocks.TabIndex = 0
+        Me.Stocks.Text = "Current stock"
+        Me.Stocks.UseVisualStyleBackColor = True
+        '
+        'stocklevel
+        '
+        ChartArea36.Name = "ChartArea1"
+        Me.stocklevel.ChartAreas.Add(ChartArea36)
+        Legend36.Name = "Legend1"
+        Me.stocklevel.Legends.Add(Legend36)
+        Me.stocklevel.Location = New System.Drawing.Point(1, 5)
+        Me.stocklevel.Name = "stocklevel"
+        Series38.ChartArea = "ChartArea1"
+        Series38.Legend = "Legend1"
+        Series38.Name = "Series"
+        Me.stocklevel.Series.Add(Series38)
+        Me.stocklevel.Size = New System.Drawing.Size(608, 300)
+        Me.stocklevel.TabIndex = 10
+        Me.stocklevel.Text = "Chart1"
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.Stocks)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Controls.Add(Me.TabPage6)
+        Me.TabControl1.Location = New System.Drawing.Point(1, 3)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(617, 358)
+        Me.TabControl1.TabIndex = 9
+        '
+        'exportprdbtn
+        '
+        Me.exportprdbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.exportprdbtn.FlatAppearance.BorderSize = 0
+        Me.exportprdbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.exportprdbtn.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.exportprdbtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.exportprdbtn.Location = New System.Drawing.Point(10, 349)
+        Me.exportprdbtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.exportprdbtn.Name = "exportprdbtn"
+        Me.exportprdbtn.Size = New System.Drawing.Size(131, 25)
+        Me.exportprdbtn.TabIndex = 18
+        Me.exportprdbtn.Text = "Export"
+        Me.exportprdbtn.UseVisualStyleBackColor = False
+        '
+        'supplierexportbtn
+        '
+        Me.supplierexportbtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(41, Byte), Integer), CType(CType(52, Byte), Integer))
+        Me.supplierexportbtn.FlatAppearance.BorderSize = 0
+        Me.supplierexportbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.supplierexportbtn.Font = New System.Drawing.Font("Arial", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.supplierexportbtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
+        Me.supplierexportbtn.Location = New System.Drawing.Point(13, 347)
+        Me.supplierexportbtn.Margin = New System.Windows.Forms.Padding(2)
+        Me.supplierexportbtn.Name = "supplierexportbtn"
+        Me.supplierexportbtn.Size = New System.Drawing.Size(131, 25)
+        Me.supplierexportbtn.TabIndex = 19
+        Me.supplierexportbtn.Text = "Export"
+        Me.supplierexportbtn.UseVisualStyleBackColor = False
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(235, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(832, 459)
+        Me.Controls.Add(Me.toastPanel)
         Me.Controls.Add(Me.navigationpnl)
-        Me.Controls.Add(Me.Reportspnl)
-        Me.Controls.Add(Me.Adjntranspanl)
-        Me.Controls.Add(Me.Auditpnl)
         Me.Controls.Add(Me.pnlProducts)
         Me.Controls.Add(Me.supplierspnl)
         Me.Controls.Add(Me.dashboardpnl)
+        Me.Controls.Add(Me.Reportspnl)
+        Me.Controls.Add(Me.Adjntranspanl)
+        Me.Controls.Add(Me.Auditpnl)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -1846,23 +1858,6 @@ Partial Class Dashboard
         Me.Reportspnl.PerformLayout()
         Me.TabControl2.ResumeLayout(False)
         Me.TabPage8.ResumeLayout(False)
-        Me.TabControl1.ResumeLayout(False)
-        Me.Stocks.ResumeLayout(False)
-        CType(Me.stocklevel, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
-        CType(Me.reorderchart, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage1.ResumeLayout(False)
-        CType(Me.restockstatus, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage3.ResumeLayout(False)
-        CType(Me.strecevied, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage4.ResumeLayout(False)
-        CType(Me.expirychart, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage5.ResumeLayout(False)
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage6.ResumeLayout(False)
-        CType(Me.salesperfomance, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage7.ResumeLayout(False)
-        CType(Me.waste, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage9.ResumeLayout(False)
         Me.TabControl3.ResumeLayout(False)
         Me.TabPage10.ResumeLayout(False)
@@ -1900,6 +1895,21 @@ Partial Class Dashboard
         Me.navigationpnl.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage6.ResumeLayout(False)
+        CType(Me.salesperfomance, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage5.ResumeLayout(False)
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
+        CType(Me.expirychart, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage3.ResumeLayout(False)
+        CType(Me.strecevied, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        CType(Me.restockstatus, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.reorderchart, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Stocks.ResumeLayout(False)
+        CType(Me.stocklevel, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -1993,23 +2003,6 @@ Partial Class Dashboard
     Friend WithEvents TabControl3 As TabControl
     Friend WithEvents TabPage10 As TabPage
     Friend WithEvents TabPage11 As TabPage
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents Stocks As TabPage
-    Friend WithEvents stocklevel As DataVisualization.Charting.Chart
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents reorderchart As DataVisualization.Charting.Chart
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents restockstatus As DataVisualization.Charting.Chart
-    Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents strecevied As DataVisualization.Charting.Chart
-    Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents expirychart As DataVisualization.Charting.Chart
-    Friend WithEvents TabPage5 As TabPage
-    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
-    Friend WithEvents TabPage6 As TabPage
-    Friend WithEvents TabPage7 As TabPage
-    Friend WithEvents salesperfomance As DataVisualization.Charting.Chart
-    Friend WithEvents waste As DataVisualization.Charting.Chart
     Friend WithEvents productsupplier As DataVisualization.Charting.Chart
     Friend WithEvents TabPage12 As TabPage
     Friend WithEvents TabPage13 As TabPage
@@ -2030,4 +2023,22 @@ Partial Class Dashboard
     Friend WithEvents suprate As DataVisualization.Charting.Chart
     Friend WithEvents PSSchart As DataVisualization.Charting.Chart
     Friend WithEvents IssuesChart As DataVisualization.Charting.Chart
+    Friend WithEvents toastPanel As Panel
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents Stocks As TabPage
+    Friend WithEvents stocklevel As DataVisualization.Charting.Chart
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents reorderchart As DataVisualization.Charting.Chart
+    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents restockstatus As DataVisualization.Charting.Chart
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents strecevied As DataVisualization.Charting.Chart
+    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents expirychart As DataVisualization.Charting.Chart
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents salesperfomance As DataVisualization.Charting.Chart
+    Friend WithEvents exportprdbtn As Button
+    Friend WithEvents supplierexportbtn As Button
 End Class

@@ -1,17 +1,14 @@
-﻿Imports System.IO
+﻿Imports System.Data.SqlClient
+Imports System.IO
 Imports MySql.Data.MySqlClient
 
 Public Class Login
+    Dim connectionString As String = "Server=localhost;Database=isleshopdb;uid=root;Pwd=;"
     Private loginAttempts As Integer = 0
     Private Const maxLoginAttempts As Integer = 5
     Private time As Integer = 30
     Private numLocked = 0
     Dim logFilePath As String = Path.Combine(Application.StartupPath, "log.txt")
-    ' On login or initialization
-
-
-    Dim connectionString As String = "Server=localhost;Database=isleshopdb;uid=root;Pwd=;"
-
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = txtUsername.Text
         Dim password As String = txtPassword.Text
@@ -129,8 +126,7 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' This should be called only once, typically when the application starts
-        AuditTrail.InitializeLogFile("myapp_log.txt", Path.Combine(Application.StartupPath, "Logs"))
+        AuditTrail.InitializeLogFile("log.txt", Path.Combine(Application.StartupPath, "Logs"))
         AuditTrail.WriteLog("Application started.")
 
     End Sub
